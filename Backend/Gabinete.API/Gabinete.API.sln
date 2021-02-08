@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabinete.API", "Gabinete.API.csproj", "{E2580019-C7F0-40C7-8FE5-3D1BE8C4EF4F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gabinete.API", "Gabinete.API", "{518E8D8A-CA32-43A7-918A-3B9047EE25B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gabinete.Application.BusinessLogic", "Gabinete.Application.BusinessLogic", "{9E8CD75D-337E-4E9E-A6E3-7DE5FF226767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +22,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2580019-C7F0-40C7-8FE5-3D1BE8C4EF4F} = {518E8D8A-CA32-43A7-918A-3B9047EE25B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {91682077-99C0-4004-A410-845777E58A1A}

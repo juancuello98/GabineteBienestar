@@ -10,12 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Gabinete.API.Models;
-using Microsoft.EntityFrameworkCore;
 
-
-
-namespace Gabinete.API
+namespace GabineteBienestar
 {
     public class Startup
     {
@@ -29,10 +25,6 @@ namespace Gabinete.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AlumnoContext>(opt =>
-               opt.UseInMemoryDatabase("AlumnosList"));
-            services.AddDbContext<ParemetersContext>(opt =>
-               opt.UseInMemoryDatabase("ParametersList"));
             services.AddControllers();
         }
 

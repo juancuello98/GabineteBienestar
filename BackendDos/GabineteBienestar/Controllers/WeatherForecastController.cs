@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Gabinete.API.Controllers
+namespace GabineteBienestar.Controllers
 {
     [ApiController]
     [Route("[controller]")]

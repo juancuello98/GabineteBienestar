@@ -1,6 +1,6 @@
 using System;
 
-namespace Gabinete.API
+namespace GabineteBienestar
 {
     public class WeatherForecast
     {

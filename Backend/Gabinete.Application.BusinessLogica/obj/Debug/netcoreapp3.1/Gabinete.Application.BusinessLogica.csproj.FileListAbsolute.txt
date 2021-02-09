@@ -1,0 +1,16 @@
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.deps.json
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.AssemblyInfoInputs.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.AssemblyInfo.cs
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.csproj.CoreCompileInputs.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Dom.Models.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Dom.Models.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.csprojAssemblyReference.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Application.BusinessLogica\obj\Debug\netcoreapp3.1\Gabinete.Application.BusinessLogica.csproj.CopyComplete

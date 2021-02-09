@@ -10,10 +10,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Gabinete.API.Models;
 using Microsoft.EntityFrameworkCore;
-
-
+using AutoMapper;
+using System.Reflection;
+using Gabinete.Persistence.EFramework.context;
+using Gabinete.Domain.Repositorie;
+using Gabinete.Application.BusinessLogica;
 
 namespace Gabinete.API
 {
@@ -29,11 +31,14 @@ namespace Gabinete.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AlumnoContext>(opt =>
-               opt.UseInMemoryDatabase("AlumnosList"));
-            services.AddDbContext<ParemetersContext>(opt =>
-               opt.UseInMemoryDatabase("ParametersList"));
+            //services.AddAutoMapper(Assembly.Load("Gabinete.Infrastructure.Automapper"));
             services.AddControllers();
+            services.AddDbContext<GabineteContext>(conf => conf.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddControllers().AddNewtonsoftJson(c => c.UseMemberCasing());
+            services.AddControllers();
+
+            services.AddTransient<AlumnoRepository>();
+            services.AddTransient<AlumnoBusinessLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

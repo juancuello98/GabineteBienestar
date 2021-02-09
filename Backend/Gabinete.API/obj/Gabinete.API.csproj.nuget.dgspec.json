@@ -26,7 +26,17 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Application.BusinessLogica\\Gabinete.Application.BusinessLogica.csproj": {
+                "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Application.BusinessLogica\\Gabinete.Application.BusinessLogica.csproj"
+              },
+              "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Infrastructure.Automaper\\Gabinete.Infrastructure.Automaper.csproj": {
+                "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Infrastructure.Automaper\\Gabinete.Infrastructure.Automaper.csproj"
+              },
+              "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj": {
+                "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -38,13 +48,13 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[3.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.11, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -75,6 +85,333 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Application.BusinessLogica\\Gabinete.Application.BusinessLogica.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Application.BusinessLogica\\Gabinete.Application.BusinessLogica.csproj",
+        "projectName": "Gabinete.Application.BusinessLogica",
+        "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Application.BusinessLogica\\Gabinete.Application.BusinessLogica.csproj",
+        "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Application.BusinessLogica\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Domain.Repositorie\\Gabinete.Domain.Repositorie.csproj": {
+                "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Domain.Repositorie\\Gabinete.Domain.Repositorie.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Analyzers": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Dom.Models\\Gabinete.Dom.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Dom.Models\\Gabinete.Dom.Models.csproj",
+        "projectName": "Gabinete.Dom.Models",
+        "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Dom.Models\\Gabinete.Dom.Models.csproj",
+        "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Dom.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Domain.Repositorie\\Gabinete.Domain.Repositorie.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Domain.Repositorie\\Gabinete.Domain.Repositorie.csproj",
+        "projectName": "Gabinete.Domain.Repositorie",
+        "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Domain.Repositorie\\Gabinete.Domain.Repositorie.csproj",
+        "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Domain.Repositorie\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Dom.Models\\Gabinete.Dom.Models.csproj": {
+                "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Dom.Models\\Gabinete.Dom.Models.csproj"
+              },
+              "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj": {
+                "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Infrastructure.Automaper\\Gabinete.Infrastructure.Automaper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Infrastructure.Automaper\\Gabinete.Infrastructure.Automaper.csproj",
+        "projectName": "Gabinete.Infrastructure.Automaper",
+        "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Infrastructure.Automaper\\Gabinete.Infrastructure.Automaper.csproj",
+        "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Infrastructure.Automaper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj",
+        "projectName": "Gabinete.Persistence.EFramework",
+        "projectPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\Gabinete.Persistence.EFramework.csproj",
+        "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\Backend\\Gabinete.Persistence.EFramework\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

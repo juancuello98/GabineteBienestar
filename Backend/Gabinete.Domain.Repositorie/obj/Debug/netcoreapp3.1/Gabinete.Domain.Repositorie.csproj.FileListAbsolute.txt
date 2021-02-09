@@ -1,0 +1,14 @@
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.deps.json
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.AssemblyInfoInputs.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.AssemblyInfo.cs
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Dom.Models.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Dom.Models.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.csprojAssemblyReference.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.csproj.CopyComplete
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositorie\obj\Debug\netcoreapp3.1\Gabinete.Domain.Repositorie.csproj.CoreCompileInputs.cache

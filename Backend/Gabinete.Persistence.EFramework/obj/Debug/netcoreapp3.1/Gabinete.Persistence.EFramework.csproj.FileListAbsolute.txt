@@ -1,0 +1,12 @@
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.deps.json
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.AssemblyInfoInputs.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.AssemblyInfo.cs
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.runtimeconfig.json
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.runtimeconfig.dev.json
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\bin\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.genruntimeconfig.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.csprojAssemblyReference.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Persistence.EFramework\obj\Debug\netcoreapp3.1\Gabinete.Persistence.EFramework.csproj.CoreCompileInputs.cache

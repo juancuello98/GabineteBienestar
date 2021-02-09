@@ -1,47 +1,75 @@
-<section class="formulario">
-  <div class="container">
-    <div class="form-group row m-3">
-      <label for="inputNombre" class="col-sm-2 col-form-label">Nombre y Apellido</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="inputNombre">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group row m-3">
-        <label for="inputDNI" class="col-sm-2 col-form-label">DNI:</label>
-        <div class="col-sm-2">
-          <input type="number" class="form-control" id="inputDNI">
-        </div>
-        <div class="select">
-          <label for="inputMotivos" class="col-sm-2 col-form-label">Motivos:</label>
-          <div class="col-sm-3">
-            <select id="inputMotivos" class="form-control">
-              <option selected></option>
-              <option>Familiar</option>
-              <option>Trabajo</option>
-              <option>Universidad</option>
-            </select>
+<div class="container mt-5">
+  <form action="">
+    <div class="card shadow rounded-3">
+      <div class="card-body">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <mat-form-field appearance="legacy" class="full-width">
+                <mat-label>Nombre y apellido</mat-label>
+                <input matInput type="text" id="inputNombre" [value]="_alumno.nombre" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-12">
+              <mat-form-field appearance="legacy" class="full-width">
+                <mat-label>DNI</mat-label>
+                <input matInput maxlength="8" type="text" id="inputNombre" [value]="_alumno.documento" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <mat-form-field appearance="legacy" class="full-width">
+                <mat-label>Preferencia Horaria</mat-label>
+                <!-- <input matInput maxlength="8" type="text" id="inputNombre" /> -->
+                <mat-select multiple>
+                  <mat-option *ngFor="let opcion of listaHorarios" [value]="opcion">
+                    {{ opcion }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-12">
+              <mat-form-field appearance="legacy" class="full-width">
+                <mat-label>Motivos</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let opcion of listaMotivos" [value]="opcion">
+                    {{ opcion }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <mat-form-field class="full-width">
+                <mat-label>Observaciones</mat-label>
+                <input
+                  matInput
+                  #message
+                  maxlength="256"
+                  class="height-textarea"
+                  placeholder="Ejemplo. Contactar por mail"
+                />
+                <mat-hint align="start"
+                  ><strong
+                    >Escriba un comentario que acompañe la solicitud</strong
+                  >
+                </mat-hint>
+                <mat-hint align="end"
+                  >{{ message.value.length }} / 256</mat-hint
+                >
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row justify-content-start mt-5" >
+            <div class="col-md-4 col-sm-6 col-12 col-xl-2 align-self-end">
+              <button mat-raised-button color="primary" class="full-width">Enviar solicitud</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="form-group row m-3">
-      <div class="col-sm-2">Preferencias Horarias</div>
-      <div class="col-sm-2 check" >
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
-          <label class="form-check-label" for="gridCheck1">
-            Example checkbox
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
-          <label class="form-check-label" for="gridCheck1">
-            Example checkbox
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </form>
+</div>
 

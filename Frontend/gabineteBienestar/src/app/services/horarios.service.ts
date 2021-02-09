@@ -3,18 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, retry, catchError } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root'
 })
+export class HorariosService {
 
-export class CombosService {
-
-  private urlApi = 'https://localhost:44307/api/Solicitud/motivos';
+  private urlApi = 'https://localhost:44307/api/Solicitud/horarios';
 
   constructor(private http: HttpClient) {}
 
-  public getMotivos(): Observable<any> {
+  public getHorarios(): Observable<any> {
     return this.http.get<any>(this.urlApi)
       .pipe(
         catchError(err => {

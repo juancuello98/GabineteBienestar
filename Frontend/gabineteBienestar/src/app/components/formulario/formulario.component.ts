@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CombosService } from 'src/app/services/combo.service';
+import { AlumnoService } from 'src/app/services/alumno.service';
+import { HorariosService } from 'src/app/services/horarios.service';
+import { Alumno } from 'src/app/modelos/alumno';
 
 @Component({
   selector: 'app-formulario',
@@ -8,17 +11,35 @@ import { CombosService } from 'src/app/services/combo.service';
 })
 export class FormularioComponent implements OnInit {
 
-  lista = [];
+  listaMotivos = [];
+  listaHorarios = [];
+  _alumno : Alumno = new Alumno();
 
-  constructor(private ComboService : CombosService) { }
+  constructor(private MotivosService : CombosService, private AlumnoService: AlumnoService,private HorarioService : HorariosService) { }
 
   ngOnInit(): void {
-    this.getComboMotivos();
+      this.obtenerAlumno();
+      this.getComboMotivos();
+      this.getHorarios();
+
   }
 
   public getComboMotivos() {
-    this.ComboService.getMotivos().subscribe((res) => {
-      this.lista = res;
+    this.MotivosService.getMotivos().subscribe((res) => {
+      this.listaMotivos = res;
+    })
+  }
+
+  public getHorarios(){
+    this.HorarioService.getHorarios().subscribe((res) => {
+      this.listaHorarios = res;
+    })
+  }
+
+  public obtenerAlumno(){
+    this.AlumnoService.getAlumno().subscribe((res) => {
+      this._alumno.nombre = res.nombre;
+      this._alumno.documento = res.documento;
     })
   }
 }

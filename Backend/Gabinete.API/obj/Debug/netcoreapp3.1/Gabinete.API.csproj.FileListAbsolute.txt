@@ -15,7 +15,6 @@ C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.dll
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.pdb
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.genruntimeconfig.cache
-C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.csprojAssemblyReference.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
@@ -153,3 +152,4 @@ C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.csproj.CoreCompileInputs.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.API\obj\Debug\netcoreapp3.1\Gabinete.API.csprojAssemblyReference.cache

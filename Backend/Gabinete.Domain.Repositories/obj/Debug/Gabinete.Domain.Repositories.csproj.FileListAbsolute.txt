@@ -1,0 +1,16 @@
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Gabinete.Domain.Repositories.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Gabinete.Domain.Repositories.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\obj\Debug\Gabinete.Domain.Repositories.csproj.CoreCompileInputs.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\obj\Debug\Gabinete.Domain.Repositories.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\obj\Debug\Gabinete.Domain.Repositories.pdb
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\Backend\Gabinete.Domain.Repositories\obj\Debug\Gabinete.Domain.Repositories.csproj.CopyComplete

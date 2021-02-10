@@ -15,7 +15,13 @@ export class FormularioComponent implements OnInit {
   listaHorarios = [];
   _alumno : Alumno = new Alumno();
 
-  constructor(private MotivosService : CombosService, private AlumnoService: AlumnoService,private HorarioService : HorariosService) { }
+
+
+  constructor(private MotivosService : CombosService, private AlumnoService: AlumnoService,private HorarioService : HorariosService) {
+
+  }
+
+
 
   ngOnInit(): void {
       this.obtenerAlumno();

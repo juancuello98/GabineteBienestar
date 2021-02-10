@@ -12,6 +12,8 @@ namespace GabineteBienestar.Controllers
     [ApiController]
     public class SolicitudController : ControllerBase
     {
+        List<Alumno> listaAlumnos = new List<Alumno>();
+
         [HttpGet]
         [Route("motivos")]
         public IActionResult getMotivos()
@@ -42,6 +44,14 @@ namespace GabineteBienestar.Controllers
             ListaHorarios.Add("Martes de 10 a 16");
             ListaHorarios.Add("Viernes de 9 a 17");
             return Ok(ListaHorarios);
+        }
+
+        [HttpPost]
+        [Route("alumnos")]
+        public IActionResult postAlumnos(Alumno alumno)
+        {
+            listaAlumnos.Add(alumno);
+            return Ok(listaAlumnos);
         }
     }
 }

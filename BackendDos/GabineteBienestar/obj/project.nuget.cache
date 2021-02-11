@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xcbKReAm93wn0n+XCaPWLHtJqMoX7HyAODyyeMnqRdPlpAb7gbAA79YCeqY9tC3QTcKKDwgXwveF5/ib3vV5+Q==",
+  "dgSpecHash": "zS7aZCPosYX6C0biiXnTxU18UTFaESHTDGIccJcoMDcMwewwMo42NQ9AmU1216WHJXI/NI6xmYN9j6+qsTBLqA==",
   "success": true,
   "projectFilePath": "C:\\Tycon\\Ejercicio Siglo21\\Formulario Web\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\juan_\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

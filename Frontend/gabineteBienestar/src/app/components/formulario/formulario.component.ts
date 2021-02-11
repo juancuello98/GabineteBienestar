@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CombosService } from 'src/app/services/combo.service';
-import { AlumnoService } from 'src/app/services/alumno.service';
-import { HorariosService } from 'src/app/services/horarios.service';
+import { SolicitudService } from 'src/app/services/solicitud.service';
 import { Alumno } from 'src/app/modelos/alumno';
 
 @Component({
@@ -17,33 +15,33 @@ export class FormularioComponent implements OnInit {
 
 
 
-  constructor(private MotivosService : CombosService, private AlumnoService: AlumnoService,private HorarioService : HorariosService) {
+  constructor(private SolicitudServices: SolicitudService) {
 
   }
 
 
 
   ngOnInit(): void {
-      this.obtenerAlumno();
-      this.getComboMotivos();
-      this.getHorarios();
+      // this.obtenerAlumno();
+      // this.getComboMotivos();
+      // this.getHorarios();
 
   }
 
   public getComboMotivos() {
-    this.MotivosService.getMotivos().subscribe((res) => {
+    this.SolicitudServices.getMotivos().subscribe((res) => {
       this.listaMotivos = res;
     })
   }
 
   public getHorarios(){
-    this.HorarioService.getHorarios().subscribe((res) => {
+    this.SolicitudServices.getHorarios().subscribe((res) => {
       this.listaHorarios = res;
     })
   }
 
   public obtenerAlumno(){
-    this.AlumnoService.getAlumno().subscribe((res) => {
+    this.SolicitudServices.getAlumno().subscribe((res) => {
       this._alumno.nombre = res.nombre;
       this._alumno.documento = res.documento;
     })

@@ -12,7 +12,26 @@ namespace GabineteBienestar.Controllers
     [ApiController]
     public class SolicitudController : ControllerBase
     {
-        List<Alumno> listaAlumnos = new List<Alumno>();
+        //List<Alumno> listaAlumnos = new List<Alumno>();
+
+        [HttpGet]
+        [Route("loguear")]
+
+        public async Task<IActionResult> LoginAsync()
+        {
+            var bizuitToken = await Common.LoginAsync();
+
+            if (!bizuitToken.Contains("Error"))
+            {
+                return Ok(bizuitToken);
+            }
+            else
+            {
+                return Unauthorized();
+            }
+            
+        }
+
 
         [HttpGet]
         [Route("motivos")]
@@ -25,14 +44,14 @@ namespace GabineteBienestar.Controllers
             return Ok(ListaMotivos);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("datosAlumno")]
-        public Alumno getDatosAlumno()
+        public async Task<IActionResult> getDatosAlumno()
         {
-            Alumno _alumno = new Alumno();
-            _alumno.Documento = 41439420;
-            _alumno.Nombre = "Juan Cuello";
-            return _alumno;
+                Alumno _alumno = new Alumno();
+                _alumno.Documento = 41439420;
+                _alumno.Nombre = "Juan Cuello";
+                return Ok(_alumno);           
         }
 
         [HttpGet]
@@ -46,12 +65,12 @@ namespace GabineteBienestar.Controllers
             return Ok(ListaHorarios);
         }
 
-        [HttpPost]
-        [Route("alumnos")]
-        public IActionResult postAlumnos(Alumno alumno)
-        {
-            listaAlumnos.Add(alumno);
-            return Ok(listaAlumnos);
-        }
+        //[HttpPost]
+        //[Route("sendDataAlumno")]
+        //public async T<IActionResult> sendData (string token)
+        //{
+        //    //listaAlumnos.Add(alumno);
+        //    //return Ok(listaAlumnos);
+        //}
     }
 }

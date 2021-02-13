@@ -7,5 +7,9 @@ namespace GabineteBienestar.Models
 {
     public class BizuitParameter
     {
+        public int Documento { set; get; }
+        public string Motivo { set; get; }
+        public string preferenciaHoraria { set; get; }
+        public string Observaciones { set; get; }
     }
 }

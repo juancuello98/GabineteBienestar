@@ -17,7 +17,7 @@ export class SolicitudService {
 
   }
 
-  public getToken(token : string):Observable<string> {
+  public getToken():Observable<string> {
 
 
     return this.http.get<any>(this.urlApi+'loguear').pipe(
@@ -25,7 +25,7 @@ export class SolicitudService {
         throw err.error;
       }),
       map((data) => {
-        localStorage.setItem('token',data);
+        localStorage.setItem("token",data)
         return data;
       })
     );
@@ -48,7 +48,7 @@ export class SolicitudService {
   }
 
   public getHorarios(): Observable<any> {
-    return this.http.get<any>(this.urlApi)
+    return this.http.get<any>(this.urlApi + 'horarios')
       .pipe(
         catchError(err => {
           throw err.error;
@@ -61,7 +61,7 @@ export class SolicitudService {
   }
 
   public getMotivos(): Observable<any> {
-    return this.http.get<any>(this.urlApi)
+    return this.http.get<any>(this.urlApi + 'motivos')
       .pipe(
         catchError(err => {
           throw err.error;

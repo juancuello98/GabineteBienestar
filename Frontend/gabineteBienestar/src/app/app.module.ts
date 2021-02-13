@@ -11,7 +11,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor} from './services/interceptors.service';
+import { provideRoutes } from '@angular/router';
+import { SolicitudService } from './services/solicitud.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCheckboxModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [[{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}]
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

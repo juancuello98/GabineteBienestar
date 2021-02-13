@@ -22,16 +22,23 @@ export class FormularioComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+
+
       // this.obtenerAlumno();
       // this.getComboMotivos();
-      // this.getHorarios();
+
+      this.getToken();
 
   }
 
+  public getToken(){
+    this.SolicitudServices.getToken().subscribe( (res) => {
+      localStorage.setItem("token",res);
+    });
+  }
   public getComboMotivos() {
-    this.SolicitudServices.getMotivos().subscribe((res) => {
-      this.listaMotivos = res;
-    })
+    this.SolicitudServices.getMotivos();
   }
 
   public getHorarios(){

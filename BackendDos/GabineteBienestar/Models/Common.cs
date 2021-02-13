@@ -14,8 +14,10 @@ namespace GabineteBienestar.Models
     {
         public static async Task<string> LoginAsync()
         {
-            var urlApi = Config.GetUrlApi() + "api/Login";
-            var authorization = Encoding.UTF8.GetBytes(Config.GetUserName() + ":" + Config.GetUserPassword());
+           
+
+            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/Login";
+            var authorization = Encoding.UTF8.GetBytes(Config.GetFromAppSettings("bizuitUser") + ":" + Config.GetFromAppSettings("bizuitPassword"));
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(authorization));
             var response = await client.GetAsync(urlApi);
@@ -23,9 +25,9 @@ namespace GabineteBienestar.Models
             switch (response.StatusCode.ToString())
             {
                 case "InternalServerError":
-                            return "Error case 1";
+                            return "Error" + response.Content.ReadAsStringAsync().Result;
                 case "NotFound":
-                            return "Error case 2";
+                            return "Error" + response.Content.ReadAsStringAsync().Result;
                 default:
                     var result = JsonConvert.DeserializeObject<LoginResponse>(response.Content.ReadAsStringAsync().Result);
                     return result.token;
@@ -33,5 +35,31 @@ namespace GabineteBienestar.Models
                 
             
         }
+
+        //public static async Task<IActionResult> PluginsTest(string token)
+        //{
+        //    var urlApi = Config.GetUrlApi() + "api/Dashboard/Plugins";
+        //   //var authorization = Encoding.UTF8.GetBytes(Config.GetUserName() + ":" + Config.GetUserPassword());
+        //    var client = new HttpClient();
+        //    client.DefaultRequestHeaders.Add("BZ-AUTH-TOKEN","Basic " + token);
+        //    //= new AuthenticationHeaderValue("Basic", Convert.ToBase64String(authorization));
+        //    var response = await client.GetAsync(urlApi);
+        //    var result = response.Content.ReadAsStringAsync().Result;
+        //    switch (response.StatusCode.ToString().ToLower())
+        //    {
+        //        case "ok":
+        //            return StatusCode;
+        //        case "InternalServerError":
+        //            return "Error" + response.Content.ReadAsStringAsync().Result;
+        //        case "NotFound":
+        //            return "Error" + response.Content.ReadAsStringAsync().Result;
+        //        default:
+        //            var result = JsonConvert.DeserializeObject<LoginResponse>(response.Content.ReadAsStringAsync().Result);
+        //            return response;
+        //    }
+            
+
+
+        
     }
 }

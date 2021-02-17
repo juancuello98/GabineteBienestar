@@ -11,8 +11,8 @@ namespace GabineteBienestar.Models
          bizuit se obtiene como resultado de la consulta que se hace con el DNI.*/
 
         public int Documento { set; get; }
-        public string Motivo { set; get; }
-        public string preferenciaHoraria { set; get; }
+        public int ReasonId { set; get; }
+        public string TimePreferencesId { set; get; }
         public string Observaciones { set; get; }
     }
 }

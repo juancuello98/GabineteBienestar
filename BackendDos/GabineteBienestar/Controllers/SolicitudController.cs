@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using GabineteBienestar.Models;
 using Microsoft.AspNetCore.Http;
@@ -18,27 +19,40 @@ namespace GabineteBienestar.Controllers
         [HttpGet]
         [Route("loguear")]
 
-        public async Task<string> LoginAsync()
+        public async Task<IActionResult> LoginAsync()
         {
-            var bizuitToken = await Common.LoginAsync();
+            /*  lo que hace este metodo es devolver el token
+            a traves del metodo LoginAsync(), este string despues se guarda en el Localstorage del navegador */
+
+            try
+            {
+                var bizuitToken = await Common.LoginAsync();
+                if (!bizuitToken.Contains("Error"))
+                {
+                    return Ok(bizuitToken);
+                }
+
+                return NotFound(bizuitToken);
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrio un error al obtener el token");
+            }
+
+
+           
 
             /* Cambiar esto, hay que poner un try catch, lo que hace este metodo es devolver el token
             a traves del metodo LoginAsync(), este string despues se guarda en el Localstorage del navegador */
 
-            if (!bizuitToken.Contains("Error"))
-            {
-                return bizuitToken;
-            }
-            else
-            {
-                return "No fue autorizado por algun motivo";
-            }
+            
 
         }
 
 
         [HttpGet]
-        [Route("GetReasons")]
+        [Route("GabineteBienestar/parameters/GetReasons")]
         public async Task<IActionResult> GetReasons([FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
             /* Actualmente esta trayendo los datos del plugin PersonasFer, del componente persona,
@@ -68,7 +82,7 @@ namespace GabineteBienestar.Controllers
              codigos de error */
             if (!response.IsSuccessStatusCode)
             {
-                if(response.ReasonPhrase == "Unauthorizade")
+                if(response.ReasonPhrase == "Unauthorized")
                 {
                     return StatusCode(StatusCodes.Status401Unauthorized, result);
                 }
@@ -86,7 +100,7 @@ namespace GabineteBienestar.Controllers
         }
 
         [HttpGet]
-        [Route("GetTimePreferences")]
+        [Route("GabineteBienestar/parameters/GetTimePreferences")]
         public async Task<IActionResult> GetTimesPreferences([FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
             // Aca hay que cambiar los nombres que completan la ruta de la api, trayendo el plugin "Tipos", componente "Parameters"
@@ -96,6 +110,7 @@ namespace GabineteBienestar.Controllers
             var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[]&sort=&page=1&size=10";
             var cliente = new HttpClient();
             cliente.DefaultRequestHeaders.Add("BZ-AUTH-TOKEN", "Basic " + bizuitToken);
+
             var response = await cliente.GetAsync(urlApi);
             var result = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
@@ -115,6 +130,88 @@ namespace GabineteBienestar.Controllers
             }
 
             return StatusCode(StatusCodes.Status200OK, result);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> SendData([FromBody] SendDataRequest SendData, [FromHeader(Name = "bizuitToken")] string bizuitToken)
+        {
+            try
+            {
+                var url = Config.GetFromAppSettings("apiUrl") + "api/Instances";
+                var cliente = new HttpClient();
+                
+
+                /* Parametro de entrada del id de motivo */
+                BizuitParameter bizuitParameterReasons = new BizuitParameter();
+                bizuitParameterReasons.name = "pMotivos";
+                bizuitParameterReasons.value = SendData.ReasonId.ToString().Trim();
+                bizuitParameterReasons.type = "SingleValue";
+                bizuitParameterReasons.direction = "In";
+
+                /* Parametro de entrada de la preferencia horaria */
+                BizuitParameter bizuitParameterTimes = new BizuitParameter();
+                bizuitParameterTimes.name = "pHorarios";
+                bizuitParameterTimes.value = SendData.TimePreferencesId;
+                bizuitParameterTimes.type = "SingleValue";
+                bizuitParameterTimes.direction = "In";
+
+                /* Parametro de entrada numero de documento */
+                BizuitParameter bizuitParameterStudentId = new BizuitParameter();
+                bizuitParameterStudentId.name = "pDni";
+                bizuitParameterStudentId.value = SendData.Documento.ToString().Trim();
+                bizuitParameterStudentId.type= "SingleValue";
+                bizuitParameterStudentId.direction = "In";
+
+                /* Parametro de entrada observaciones */
+                BizuitParameter bizuitParameterObservaciones = new BizuitParameter();
+                bizuitParameterObservaciones.name = "pObservaciones";
+                bizuitParameterObservaciones.value = SendData.Observaciones;
+                bizuitParameterObservaciones.type = "SingleValue";
+                bizuitParameterObservaciones.direction = "In";
+
+                BizuitParameter[] listaDeParametros = new BizuitParameter[4];
+                listaDeParametros[0] = bizuitParameterReasons;
+                listaDeParametros[1] = bizuitParameterTimes;
+                listaDeParametros[2] = bizuitParameterStudentId;
+                listaDeParametros[3] = bizuitParameterObservaciones;
+                /* Aca cambie la preferencias horarias en el dashboard de xml a singlevalue para que funcionara*/
+
+                /* Estoy va a llevar todos los datos que bizuit necesita*/
+
+                RaiseEventRequest RaiseEventRequest = new RaiseEventRequest();
+                RaiseEventRequest.eventName = Config.GetFromAppSettings("processName");
+                RaiseEventRequest.parameters = listaDeParametros;
+
+                /* Configuramos la request */
+
+
+                // Aca es como si hubiesemos hecho en postman body -> raw -> json , y le pasaramos las cosas por el body los parametros y lo que necesita bizuit
+                StringContent content = new StringContent(JsonConvert.SerializeObject(RaiseEventRequest), Encoding.UTF8, "application/json");
+
+                cliente.DefaultRequestHeaders.Add("BZ-AUTH-TOKEN", "Basic " + bizuitToken);
+
+
+                var response = await cliente.PostAsync(url, content);
+                var result = response.Content.ReadAsStringAsync().Result;
+
+                if(response.StatusCode.ToString().ToLower() == "ok")
+                {
+                    return StatusCode(StatusCodes.Status200OK, result);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, result);
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
         }
     }
 }

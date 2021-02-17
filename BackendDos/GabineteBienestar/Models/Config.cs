@@ -21,45 +21,58 @@ namespace GabineteBienestar.Models
             // ### Verificar por si toma como igual cuando esta escrito con distintas minusculuas y mayusculas
             // Ejemplo : ApiUrl {A, a}
 
-            switch (key)
+            try
             {
-                case "apiUrl":
-                    Configuration = builder.Build();
-                    _result = Configuration["apiUrl"];
-                    return _result;
+                Configuration = builder.Build();
+                _result = Configuration[key];
+                return _result;
 
-                case "bizuitUser":
-                    Configuration = builder.Build();
-                    _result = Configuration[key];
-                    return _result;
-
-                case "bizuitPassword":
-                    Configuration = builder.Build();
-                    _result = Configuration[key];
-                    return _result;
-
-
-                case "responseTypeId":
-                    Configuration = builder.Build();
-                    _result = Configuration[key];
-                    return _result;
-
-
-                case "responseTypeName":
-                    Configuration = builder.Build();
-                    _result = Configuration[key];
-                    return _result;
-
-
-                case "componentName":
-                    Configuration = builder.Build();
-                    _result = Configuration[key];
-                    return _result;
-
-                default:
-                    return _result;
             }
-             
+            catch (Exception)
+            {
+
+                return _result;
+            }
+           
+            //switch (key)
+            //{
+            //    case "apiUrl":
+            //        Configuration = builder.Build();
+            //        _result = Configuration["apiUrl"];
+            //        return _result;
+
+            //    case "bizuitUser":
+            //        Configuration = builder.Build();
+            //        _result = Configuration[key];
+            //        return _result;
+
+            //    case "bizuitPassword":
+            //        Configuration = builder.Build();
+            //        _result = Configuration[key];
+            //        return _result;
+
+
+            //    case "responseTypeId":
+            //        Configuration = builder.Build();
+            //        _result = Configuration[key];
+            //        return _result;
+
+
+            //    case "responseTypeName":
+            //        Configuration = builder.Build();
+            //        _result = Configuration[key];
+            //        return _result;
+
+
+            //    case "componentName":
+            //        Configuration = builder.Build();
+            //        _result = Configuration[key];
+            //        return _result;
+
+            //    default:
+            //        return _result;
+            //}
+
 
         }
 

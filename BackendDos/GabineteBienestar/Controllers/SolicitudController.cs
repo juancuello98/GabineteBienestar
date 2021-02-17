@@ -11,8 +11,10 @@ using Newtonsoft.Json;
 
 namespace GabineteBienestar.Controllers
 {
-    [Route("api/[controller]")]
+    
     [ApiController]
+    [Route("api/[controller]")]
+    //[Produces("application/json")]
     public class SolicitudController : ControllerBase
     {
      
@@ -55,9 +57,7 @@ namespace GabineteBienestar.Controllers
         [Route("GabineteBienestar/parameters/GetReasons")]
         public async Task<IActionResult> GetReasons([FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
-            /* Actualmente esta trayendo los datos del plugin PersonasFer, del componente persona,
-             * hay que cambiarlo para que apunte hacia el plugin Tipos, componente parameters, filtrando
-             por motivos */
+            
 
             /* Estoy tomando esta url como ejemplo para armar la variable urlApi */
             /* http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10 */
@@ -65,7 +65,7 @@ namespace GabineteBienestar.Controllers
             /* Armo la url, el config tiene un metodo GetFromAppSettings en el cual se la pasa por parametro el nombre
              * del nodo donde esta el valor que necesitamos, debe ser exactamente igual*/
 
-            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[]&sort=&page=1&size=10";
+            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Tipos%20de%20Motivos%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
             var cliente = new HttpClient();
             
             /*Aca se le agrega en la cabecera , en el Header de la solicitud http, una key con su value para 
@@ -104,10 +104,10 @@ namespace GabineteBienestar.Controllers
         public async Task<IActionResult> GetTimesPreferences([FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
             // Aca hay que cambiar los nombres que completan la ruta de la api, trayendo el plugin "Tipos", componente "Parameters"
-            // pero filtrando por parameterTypeName = 'Horarios' y asi lo mismo con motivos.
+            // pero filtrando por parameterTypeName = 'Horarios' y asi lo mismo con motivos. YA ESTA HECHO !!!
 
             //http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10
-            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[]&sort=&page=1&size=10";
+            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Preferencia%20Horaria%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
             var cliente = new HttpClient();
             cliente.DefaultRequestHeaders.Add("BZ-AUTH-TOKEN", "Basic " + bizuitToken);
 
@@ -117,15 +117,15 @@ namespace GabineteBienestar.Controllers
             {
                 if (response.ReasonPhrase == "Unauthorizade")
                 {
-                    return StatusCode(StatusCodes.Status401Unauthorized, result);
+                    return StatusCode(StatusCodes.Status401Unauthorized, ModelState);
                 }
                 else if (response.ReasonPhrase == "InternalServerError")
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, result);
+                    return StatusCode(StatusCodes.Status500InternalServerError, ModelState);
                 }
                 else if (response.ReasonPhrase == "NotFound")
                 {
-                    return StatusCode(StatusCodes.Status404NotFound, result);
+                    return StatusCode(StatusCodes.Status404NotFound, ModelState);
                 }
             }
 

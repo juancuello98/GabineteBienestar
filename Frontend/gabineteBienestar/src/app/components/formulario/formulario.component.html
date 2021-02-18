@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <form action="">
+  <form action="" (ngSubmit)="SendSolicitud()">
     <div class="card shadow rounded-3">
       <div class="card-body">
         <div class="form-group">
@@ -7,13 +7,13 @@
             <div class="col-md-6 col-12">
               <mat-form-field appearance="legacy" class="full-width">
                 <mat-label>Nombre y apellido</mat-label>
-                <input matInput type="text" id="inputNombre" [value]="_alumno.nombre" />
+                <input matInput type="text" id="inputNombre" />
               </mat-form-field>
             </div>
             <div class="col-md-6 col-12">
               <mat-form-field appearance="legacy" class="full-width">
                 <mat-label>DNI</mat-label>
-                <input matInput maxlength="8" type="text" id="inputNombre" [value]="_alumno.documento" />
+                <input matInput maxlength="8" type="text" id="inputNombre" [(ngModel)]="Solicitud.Documento"  />
               </mat-form-field>
             </div>
           </div>
@@ -23,8 +23,8 @@
                 <mat-label>Preferencia Horaria</mat-label>
                 <!-- <input matInput maxlength="8" type="text" id="inputNombre" /> -->
                 <mat-select multiple>
-                  <mat-option *ngFor="let opcion of listaHorarios" [value]="opcion">
-                    {{ opcion }}
+                  <mat-option *ngFor="let opcion of listaHorarios" [value]="opcion.parameterId" [(ngModel)]="Solicitud.TimePreferencesId">
+                    {{ opcion.parameterName }}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
@@ -33,8 +33,8 @@
               <mat-form-field appearance="legacy" class="full-width">
                 <mat-label>Motivos</mat-label>
                 <mat-select>
-                  <mat-option *ngFor="let opcion of listaMotivos" [value]="opcion">
-                    {{ opcion }}
+                  <mat-option *ngFor="let item of listaMotivos" [value]="item.parameterId" [(ngModel)]="Solicitud.ReasonId">
+                    {{ item.parameterName }}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
@@ -50,6 +50,7 @@
                   maxlength="256"
                   class="height-textarea"
                   placeholder="Ejemplo. Contactar por mail"
+                  [(ngModel)]="Solicitud.Observaciones"
                 />
                 <mat-hint align="start"
                   ><strong
@@ -64,9 +65,7 @@
           </div>
           <div class="row justify-content-start mt-5" >
             <div class="col-md-4 col-sm-6 col-12 col-xl-2 align-self-end">
-              <button mat-raised-button color="primary" class="full-width">Enviar solicitud</button>
-
-              <button (click)='getComboMotivos()' class="full-width btn btn-primary">Probar interceptor</button>
+              <button mat-raised-button color="primary" class="full-width" type="submit" >Enviar solicitud</button>
             </div>
           </div>
         </div>

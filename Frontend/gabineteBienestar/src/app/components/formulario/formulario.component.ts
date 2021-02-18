@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SendDataRequest } from 'src/app/modelos/SendDataRequest';
 import { SolicitudService } from 'src/app/services/solicitud.service';
-import { Alumno } from 'src/app/modelos/alumno';
+import { Parameters } from '../../modelos/Parameters';
 
 @Component({
   selector: 'app-formulario',
@@ -9,9 +10,16 @@ import { Alumno } from 'src/app/modelos/alumno';
 })
 export class FormularioComponent implements OnInit {
 
-  listaMotivos = [];
-  listaHorarios = [];
-  _alumno : Alumno = new Alumno();
+
+
+  Solicitud :SendDataRequest = new SendDataRequest();
+
+
+  listaMotivos : Array<Parameters> = [];
+  listaHorarios : Array<Parameters> = [];
+  numeroDocumento ?: number;
+  observaciones : string = "";
+  Horarios : string = "";
 
 
 
@@ -24,11 +32,10 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
 
 
-
-      // this.obtenerAlumno();
-      // this.getComboMotivos();
-
       this.getToken();
+      this.getComboMotivos();
+      this.getHorarios();
+
 
   }
 
@@ -38,19 +45,23 @@ export class FormularioComponent implements OnInit {
     });
   }
   public getComboMotivos() {
-    this.SolicitudServices.getMotivos();
+    this.SolicitudServices.getMotivos().subscribe((res) => {
+        this.listaMotivos = res.data;
+
+    })
   }
 
   public getHorarios(){
     this.SolicitudServices.getHorarios().subscribe((res) => {
-      this.listaHorarios = res;
+      this.listaHorarios = res.data;
     })
   }
 
-  public obtenerAlumno(){
-    this.SolicitudServices.getAlumno().subscribe((res) => {
-      this._alumno.nombre = res.nombre;
-      this._alumno.documento = res.documento;
-    })
+  public SendSolicitud(){
+    // this.Solicitud.Documento = 2;
+    // this.Solicitud.ReasonId = 21;
+    // this.Solicitud.TimePreferencesId = "";
+    // this.Solicitud.Observaciones = "";
+    this.SolicitudServices.sendData(this.Solicitud);
   }
 }

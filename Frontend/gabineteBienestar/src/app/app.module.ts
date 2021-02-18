@@ -13,8 +13,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor} from './services/interceptors.service';
-import { provideRoutes } from '@angular/router';
-import { SolicitudService } from './services/solicitud.service';
+import {FormsModule} from '@angular/forms';
+// import { provideRoutes } from '@angular/router';
+// import { SolicitudService } from './services/solicitud.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SolicitudService } from './services/solicitud.service';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [[{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}]
   ],

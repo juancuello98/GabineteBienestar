@@ -3,7 +3,9 @@ import { serializeNodes } from '@angular/compiler/src/i18n/digest';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, retry, catchError } from 'rxjs/operators';
-import { Alumno } from '../modelos/alumno';
+import { DataRequest } from '../modelos/dataRequest';
+import { Parameters } from '../modelos/Parameters';
+import { SendDataRequest } from '../modelos/SendDataRequest';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +15,7 @@ export class SolicitudService {
 
   private urlApi = 'https://localhost:44307/api/Solicitud/';
 
+
   constructor(private http: HttpClient) {
 
   }
@@ -20,35 +23,23 @@ export class SolicitudService {
   public getToken():Observable<string> {
 
 
-    return this.http.get<any>(this.urlApi+'loguear').pipe(
+    return this.http.get<any>(this.urlApi+'login').pipe(
       catchError((err) => {
         throw err.error;
       }),
       map((data) => {
-        localStorage.setItem("token",data)
+
         return data;
       })
     );
 
   }
 
-  public getAlumno(): Observable<Alumno> {
 
-    var _token = localStorage.getItem('token') ;
-    return this.http.post<any>(
-      this.urlApi + 'datosAlumno' ,{_token}
-      ).pipe(
-      catchError((err) => {
-        throw err.error;
-      }),
-      map((data) => {
-        return data;
-      })
-    );
-  }
 
-  public getHorarios(): Observable<any> {
-    return this.http.get<any>(this.urlApi + 'horarios')
+// servicio para llenar el combobox horarios
+  public getHorarios(): Observable<DataRequest>  {
+    return this.http.get<any>(this.urlApi + 'GabineteBienestar/parameters/GetTimePreferences')
       .pipe(
         catchError(err => {
           throw err.error;
@@ -60,8 +51,14 @@ export class SolicitudService {
       )
   }
 
-  public getMotivos(): Observable<any> {
-    return this.http.get<any>(this.urlApi + 'motivos')
+  // LLENAR EL COMBO DE MOTIVOS
+  public getMotivos(): Observable<DataRequest> {
+    // const _header = new HttpHeaders(
+    //   {
+    //     "bizuitToken" : 'ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5GshrqwvI%2fca9DDdU81u3vpdHcTui8Yqnh2CZv7aO0ik%2bvUAU%2f25JQpOxwfTeEU0mL%2fWBdJ1P%2bCVeH%2fM3jUJMNx94IY1L5uJhWf8zvICkQMw5dXK74%3d'
+    //   }
+    // );
+    return this.http.get<any>(this.urlApi + 'GabineteBienestar/parameters/GetReasons')
       .pipe(
         catchError(err => {
           throw err.error;
@@ -71,5 +68,18 @@ export class SolicitudService {
           return data;
         })
       )
+  }
+
+  public sendData (sendData : SendDataRequest): Observable<any>{
+    return this.http.post<any>(this.urlApi , sendData)
+    .pipe(
+      catchError(err => {
+        throw err.error;
+
+      }),
+      map(data => {
+        return data;
+      })
+    )
   }
 }

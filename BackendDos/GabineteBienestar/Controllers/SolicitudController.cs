@@ -19,7 +19,7 @@ namespace GabineteBienestar.Controllers
     {
      
         [HttpGet]
-        [Route("loguear")]
+        [Route("login")]
 
         public async Task<IActionResult> LoginAsync()
         {
@@ -55,9 +55,9 @@ namespace GabineteBienestar.Controllers
 
         [HttpGet]
         [Route("GabineteBienestar/parameters/GetReasons")]
-        public async Task<IActionResult> GetReasons([FromHeader(Name = "bizuitToken")] string bizuitToken)
+        public async Task<IActionResult> GetReasons(/*[FromHeader(Name = "bizuitToken")] string bizuitToken*/)
         {
-            
+            var bizuitToken = "ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5Gshrqw1wnrRSGyW0CF4pCH0Zxdti62okxLae%2fDNN%2fWg8R%2fSoUF93uu0ojzJOwyJs49cGb2dgzeW1ehsSVjm5jw3Xcg0rbT9%2fYXLXJ7ptOOZRPqB7o%3d";
 
             /* Estoy tomando esta url como ejemplo para armar la variable urlApi */
             /* http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10 */
@@ -101,8 +101,9 @@ namespace GabineteBienestar.Controllers
 
         [HttpGet]
         [Route("GabineteBienestar/parameters/GetTimePreferences")]
-        public async Task<IActionResult> GetTimesPreferences([FromHeader(Name = "bizuitToken")] string bizuitToken)
+        public async Task<IActionResult> GetTimesPreferences(/*[FromHeader(Name = "bizuitToken")] string bizuitToken*/)
         {
+            var bizuitToken = "ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5Gshrqw1wnrRSGyW0CF4pCH0Zxdti62okxLae%2fDNN%2fWg8R%2fSoUF93uu0ojzJOwyJs49cGb2dgzeW1ehsSVjm5jw3Xcg0rbT9%2fYXLXJ7ptOOZRPqB7o%3d";
             // Aca hay que cambiar los nombres que completan la ruta de la api, trayendo el plugin "Tipos", componente "Parameters"
             // pero filtrando por parameterTypeName = 'Horarios' y asi lo mismo con motivos. YA ESTA HECHO !!!
 
@@ -134,8 +135,10 @@ namespace GabineteBienestar.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> SendData([FromBody] SendDataRequest SendData, [FromHeader(Name = "bizuitToken")] string bizuitToken)
+        public async Task<IActionResult> SendData([FromBody] SendDataRequest SendData/*, [FromHeader(Name = "bizuitToken")] string bizuitToken*/)
         {
+            var bizuitToken = "ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5Gshrqw1wnrRSGyW0CF4pCH0Zxdti62okxLae%2fDNN%2fWg8R%2fSoUF93uu0ojzJOwyJs49cGb2dgzeW1ehsSVjm5jw3Xcg0rbT9%2fYXLXJ7ptOOZRPqB7o%3d";
+
             try
             {
                 var url = Config.GetFromAppSettings("apiUrl") + "api/Instances";

@@ -20,3 +20,25 @@ C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteB
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CoreCompileInputs.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.MvcApplicationPartsAssemblyInfo.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CopyComplete
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csprojAssemblyReference.cache
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.AssemblyInfoInputs.cache
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.AssemblyInfo.cs
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CoreCompileInputs.cache
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.MvcApplicationPartsAssemblyInfo.cache
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.dll
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.pdb
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.exe
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.deps.json
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.runtimeconfig.json
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.runtimeconfig.dev.json
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.dll
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.pdb
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\staticwebassets\GabineteBienestar.StaticWebAssets.Manifest.cache
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\staticwebassets\GabineteBienestar.StaticWebAssets.xml
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\scopedcss\bundle\GabineteBienestar.styles.css
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.RazorTargetAssemblyInfo.cache
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CopyComplete
+D:\Alan\Documentos\Tycon\NetCore\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.genruntimeconfig.cache

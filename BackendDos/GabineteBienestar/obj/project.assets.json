@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Alan\\Documentos\\Tycon\\NetCore\\Nuevo\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
+      "projectUniqueName": "D:\\Alan\\Documentos\\Tycon\\NetCore\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
       "projectName": "GabineteBienestar",
-      "projectPath": "D:\\Alan\\Documentos\\Tycon\\NetCore\\Nuevo\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
+      "projectPath": "D:\\Alan\\Documentos\\Tycon\\NetCore\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
       "packagesPath": "C:\\Users\\Alan\\.nuget\\packages\\",
-      "outputPath": "D:\\Alan\\Documentos\\Tycon\\NetCore\\Nuevo\\GabineteBienestar\\BackendDos\\GabineteBienestar\\obj\\",
+      "outputPath": "D:\\Alan\\Documentos\\Tycon\\NetCore\\GabineteBienestar\\BackendDos\\GabineteBienestar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alan\\AppData\\Roaming\\NuGet\\NuGet.Config",

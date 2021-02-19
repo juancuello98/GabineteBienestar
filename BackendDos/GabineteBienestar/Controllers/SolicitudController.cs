@@ -65,7 +65,7 @@ namespace GabineteBienestar.Controllers
             /* Armo la url, el config tiene un metodo GetFromAppSettings en el cual se la pasa por parametro el nombre
              * del nodo donde esta el valor que necesitamos, debe ser exactamente igual*/
 
-            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Tipos%20de%20Motivos%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
+            var urlApi = Config.GetUrlApi() + "api/" + Config.GetComponentName() + "/" + Config.GetResponse() + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Tipos%20de%20Motivos%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
             var cliente = new HttpClient();
             
             /*Aca se le agrega en la cabecera , en el Header de la solicitud http, una key con su value para 
@@ -107,7 +107,7 @@ namespace GabineteBienestar.Controllers
             // pero filtrando por parameterTypeName = 'Horarios' y asi lo mismo con motivos. YA ESTA HECHO !!!
 
             //http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10
-            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Preferencia%20Horaria%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
+            var urlApi = Config.GetUrlApi() + "api/" + Config.GetComponentName() + "/" + Config.GetResponse() + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Preferencia%20Horaria%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
             var cliente = new HttpClient();
             cliente.DefaultRequestHeaders.Add("BZ-AUTH-TOKEN", "Basic " + bizuitToken);
 
@@ -138,7 +138,7 @@ namespace GabineteBienestar.Controllers
         {
             try
             {
-                var url = Config.GetFromAppSettings("apiUrl") + "api/Instances";
+                var url = Config.GetUrlApi() + "api/Instances";
                 var cliente = new HttpClient();
                 
 
@@ -180,7 +180,7 @@ namespace GabineteBienestar.Controllers
                 /* Estoy va a llevar todos los datos que bizuit necesita*/
 
                 RaiseEventRequest RaiseEventRequest = new RaiseEventRequest();
-                RaiseEventRequest.eventName = Config.GetFromAppSettings("processName");
+                RaiseEventRequest.eventName = Config.GetProName();
                 RaiseEventRequest.parameters = listaDeParametros;
 
                 /* Configuramos la request */

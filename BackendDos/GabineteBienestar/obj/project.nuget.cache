@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EtS6Za9XtReyhE94eeTWEozDGFuoaf8uWSdwU9Fa1rY2ThOO+ldWs/kGFctC7I31JplcoCW6qyGo7y2X7ETOQg==",
+  "dgSpecHash": "BVrzqomYemdUYATLywe6eesidkCwbii+Fvs8mhHiAiJjmyyOfdlFhfQOvQja28/7CYf5qz/R025AJGm1ZuX0jg==",
   "success": true,
-  "projectFilePath": "D:\\Alan\\Documentos\\Tycon\\NetCore\\Nuevo\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
+  "projectFilePath": "D:\\Alan\\Documentos\\Tycon\\NetCore\\GabineteBienestar\\BackendDos\\GabineteBienestar\\GabineteBienestar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alan\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

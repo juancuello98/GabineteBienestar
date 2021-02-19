@@ -14,10 +14,9 @@ namespace GabineteBienestar.Models
     {
         public static async Task<string> LoginAsync()
         {
-           
 
-            var urlApi = Config.GetFromAppSettings("apiUrl") + "api/Login";
-            var authorization = Encoding.UTF8.GetBytes(Config.GetFromAppSettings("bizuitUser") + ":" + Config.GetFromAppSettings("bizuitPassword"));
+            var urlApi = Config.GetUrlApi() + "api/Login";
+            var authorization = Encoding.UTF8.GetBytes(Config.GetUser() + ":" + Config.GetPass());
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(authorization));
             var response = await client.GetAsync(urlApi);
@@ -25,15 +24,13 @@ namespace GabineteBienestar.Models
             switch (response.StatusCode.ToString())
             {
                 case "InternalServerError":
-                            return "Error" + response.Content.ReadAsStringAsync().Result;
+                    return "Error" + response.Content.ReadAsStringAsync().Result;
                 case "NotFound":
-                            return "Error" + response.Content.ReadAsStringAsync().Result;
+                    return "Error" + response.Content.ReadAsStringAsync().Result;
                 default:
                     var result = JsonConvert.DeserializeObject<LoginResponse>(response.Content.ReadAsStringAsync().Result);
                     return result.token;
-            }
-                
-            
+            }            
         }
 
         //public static async Task<IActionResult> PluginsTest(string token)

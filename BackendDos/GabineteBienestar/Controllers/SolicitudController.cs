@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using GabineteBienestar.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -14,10 +15,10 @@ namespace GabineteBienestar.Controllers
     
     [ApiController]
     [Route("api/[controller]")]
-    //[Produces("application/json")]
     public class SolicitudController : ControllerBase
     {
      
+
         [HttpGet]
         [Route("login")]
 
@@ -31,7 +32,11 @@ namespace GabineteBienestar.Controllers
                 var bizuitToken = await Common.LoginAsync();
                 if (!bizuitToken.Contains("Error"))
                 {
-                    return Ok(bizuitToken);
+                    var json = JsonConvert.SerializeObject(new {
+                        token = bizuitToken
+                    });
+
+                    return Ok(json);
                 }
 
                 return NotFound(bizuitToken);
@@ -41,24 +46,16 @@ namespace GabineteBienestar.Controllers
 
                 return StatusCode(StatusCodes.Status500InternalServerError, "Ocurrio un error al obtener el token");
             }
-
-
-           
-
-            /* Cambiar esto, hay que poner un try catch, lo que hace este metodo es devolver el token
-            a traves del metodo LoginAsync(), este string despues se guarda en el Localstorage del navegador */
-
-            
+  
 
         }
 
-
+        
         [HttpGet]
         [Route("GabineteBienestar/parameters/GetReasons")]
-        public async Task<IActionResult> GetReasons(/*[FromHeader(Name = "bizuitToken")] string bizuitToken*/)
+        public async Task<IActionResult> GetReasons([FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
-            var bizuitToken = "ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5Gshrqw1wnrRSGyW0CF4pCH0Zxdti62okxLae%2fDNN%2fWg8R%2fSoUF93uu0ojzJOwyJs49cGb2dgzeW1ehsSVjm5jw3Xcg0rbT9%2fYXLXJ7ptOOZRPqB7o%3d";
-
+            
             /* Estoy tomando esta url como ejemplo para armar la variable urlApi */
             /* http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10 */
 
@@ -99,15 +96,15 @@ namespace GabineteBienestar.Controllers
             return StatusCode(StatusCodes.Status200OK, result);
         }
 
+       
         [HttpGet]
         [Route("GabineteBienestar/parameters/GetTimePreferences")]
-        public async Task<IActionResult> GetTimesPreferences(/*[FromHeader(Name = "bizuitToken")] string bizuitToken*/)
+        public async Task<IActionResult> GetTimesPreferences([FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
-            var bizuitToken = "ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5Gshrqw1wnrRSGyW0CF4pCH0Zxdti62okxLae%2fDNN%2fWg8R%2fSoUF93uu0ojzJOwyJs49cGb2dgzeW1ehsSVjm5jw3Xcg0rbT9%2fYXLXJ7ptOOZRPqB7o%3d";
-            // Aca hay que cambiar los nombres que completan la ruta de la api, trayendo el plugin "Tipos", componente "Parameters"
-            // pero filtrando por parameterTypeName = 'Horarios' y asi lo mismo con motivos. YA ESTA HECHO !!!
+            // Aca se setean los nombres que completan la ruta de la api, trayendo el plugin "Tipos", componente "Parameters"
+            // pero filtrando por parameterTypeName = 'Horarios' y asi lo mismo con motivos. 
 
-            //http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10
+            // Modelo de ejemplo http://server.bizuit.com/TyconLabsBIZUITDashboardAPI/api/{NombreComponente}/{NombreEntidad}?parameters=[]&sort=&page=1&size=10
             var urlApi = Config.GetFromAppSettings("apiUrl") + "api/" + Config.GetFromAppSettings("componentName") + "/" + Config.GetFromAppSettings("responseTypeName") + "?parameters=[{%22name%22:%22ParametersTypes.TypeName%22,%22value%22:%22Preferencia%20Horaria%22,%22dataType%22:%22string%22}]&sort=&page=1&size=10";
             var cliente = new HttpClient();
             cliente.DefaultRequestHeaders.Add("BZ-AUTH-TOKEN", "Basic " + bizuitToken);
@@ -116,7 +113,7 @@ namespace GabineteBienestar.Controllers
             var result = await response.Content.ReadAsStringAsync();
             if (!response.IsSuccessStatusCode)
             {
-                if (response.ReasonPhrase == "Unauthorizade")
+                if (response.ReasonPhrase == "Unauthorized")
                 {
                     return StatusCode(StatusCodes.Status401Unauthorized, ModelState);
                 }
@@ -133,11 +130,11 @@ namespace GabineteBienestar.Controllers
             return StatusCode(StatusCodes.Status200OK, result);
         }
 
-
+         
         [HttpPost]
-        public async Task<IActionResult> SendData([FromBody] SendDataRequest SendData/*, [FromHeader(Name = "bizuitToken")] string bizuitToken*/)
+        public async Task<IActionResult> SendData([FromBody] SendDataRequest SendData, [FromHeader(Name = "bizuitToken")] string bizuitToken)
         {
-            var bizuitToken = "ZMdufWTdCsSYUXj7%2fBEC3GVmCT6V5aUjt%2by0BKxV5ST1KPVbv0gnUExKVqX9eCOhE7nm5vX8hPCLnuV5mn1jFncZY5Gshrqw1wnrRSGyW0CF4pCH0Zxdti62okxLae%2fDNN%2fWg8R%2fSoUF93uu0ojzJOwyJs49cGb2dgzeW1ehsSVjm5jw3Xcg0rbT9%2fYXLXJ7ptOOZRPqB7o%3d";
+            
 
             try
             {

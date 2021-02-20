@@ -7,7 +7,6 @@ C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteB
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.runtimeconfig.dev.json
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.dll
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\GabineteBienestar.pdb
-C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csprojAssemblyReference.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.AssemblyInfoInputs.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.AssemblyInfo.cs
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.RazorTargetAssemblyInfo.cache
@@ -17,6 +16,6 @@ C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteB
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.pdb
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.genruntimeconfig.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CopyComplete
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CoreCompileInputs.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.MvcApplicationPartsAssemblyInfo.cache
-C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CopyComplete

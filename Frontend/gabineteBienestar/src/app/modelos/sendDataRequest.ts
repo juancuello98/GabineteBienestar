@@ -1,6 +1,6 @@
 export class SendDataRequest{
-  Documento ?: number;
-  ReasonId ?: number;
-  TimePreferencesId ?: string;
-  Observaciones?: string;
+  Documento ?: number = undefined;
+  ReasonId ?: number = undefined;
+  TimePreferencesId ?: string = undefined;
+  Observaciones ?: string = undefined;
 }

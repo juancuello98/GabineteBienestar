@@ -19,3 +19,4 @@ C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteB
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CopyComplete
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csproj.CoreCompileInputs.cache
 C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.MvcApplicationPartsAssemblyInfo.cache
+C:\Tycon\Ejercicio Siglo21\Formulario Web\GabineteBienestar\BackendDos\GabineteBienestar\obj\Debug\netcoreapp3.1\GabineteBienestar.csprojAssemblyReference.cache

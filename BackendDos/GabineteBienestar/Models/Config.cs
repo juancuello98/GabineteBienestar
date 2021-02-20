@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.FileProviders;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,89 +16,34 @@ namespace GabineteBienestar.Models
 
         public static string GetFromAppSettings(string key)
         {
-            var _result = "";
+
+            const string DOCKER_SECRET_PATH = "/run/secrets/";
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json");
-
-            // ### Verificar por si toma como igual cuando esta escrito con distintas minusculuas y mayusculas
-            // Ejemplo : ApiUrl {A, a}
-
-            try
+            Configuration = builder.Build();
+            if (Directory.Exists(DOCKER_SECRET_PATH))
             {
-                Configuration = builder.Build();
-                _result = Configuration[key];
-                return _result;
-
+                IFileProvider provider = new PhysicalFileProvider(DOCKER_SECRET_PATH);
+                IFileInfo fileInfo = provider.GetFileInfo("appsettings.json");
+                if (fileInfo.Exists)
+                {
+                    using (var stream = fileInfo.CreateReadStream())
+                    using (var streamReader = new StreamReader(stream))
+                    {
+                        var result = JsonConvert.DeserializeObject<JToken>(streamReader.ReadToEnd());
+                        var value = result.Value<string>(key) ?? "";
+                        if (String.IsNullOrEmpty(value))
+                        {
+                            return Configuration.GetValue<string>(key);
+                        }
+                        return value;
+                    }
+                }
             }
-            catch (Exception)
-            {
-
-                return _result;
-            }
-           
-            //switch (key)
-            //{
-            //    case "apiUrl":
-            //        Configuration = builder.Build();
-            //        _result = Configuration["apiUrl"];
-            //        return _result;
-
-            //    case "bizuitUser":
-            //        Configuration = builder.Build();
-            //        _result = Configuration[key];
-            //        return _result;
-
-            //    case "bizuitPassword":
-            //        Configuration = builder.Build();
-            //        _result = Configuration[key];
-            //        return _result;
-
-
-            //    case "responseTypeId":
-            //        Configuration = builder.Build();
-            //        _result = Configuration[key];
-            //        return _result;
-
-
-            //    case "responseTypeName":
-            //        Configuration = builder.Build();
-            //        _result = Configuration[key];
-            //        return _result;
-
-
-            //    case "componentName":
-            //        Configuration = builder.Build();
-            //        _result = Configuration[key];
-            //        return _result;
-
-            //    default:
-            //        return _result;
-            //}
-
-
+            return Configuration.GetValue<string>(key);
         }
 
-        //public static string GetUserName()
-        //{
-        //    var builder = new ConfigurationBuilder()
-        //    .SetBasePath(Directory.GetCurrentDirectory())
-        //    .AddJsonFile("appsettings.json");
-        //    Configuration = builder.Build();
-        //    var bizuitUserName = Configuration["bizuitUser"];
-
-        //    return bizuitUserName;
-        //}
-
-        //public static string GetUserPassword()
-        //{
-        //    var builder = new ConfigurationBuilder()
-        //    .SetBasePath(Directory.GetCurrentDirectory())
-        //    .AddJsonFile("appsettings.json");
-        //    Configuration = builder.Build();
-        //    var bizuitUserPassword = Configuration["bizuitPassword"];
-
-        //    return bizuitUserPassword;
-        //}
+       
     }
 }

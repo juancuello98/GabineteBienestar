@@ -1,0 +1,23 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+#COPY ["GabineteBienestar/GabineteBienestar.csproj", "GabineteBienestar/"]
+COPY . .
+RUN dotnet restore "GabineteBienestar.csproj"
+
+#WORKDIR
+RUN dotnet build "GabineteBienestar.csproj" -c Release -o /app/build # ACA LO COMPILA
+
+#FROM build AS publish
+RUN dotnet publish "GabineteBienestar.csproj" -c Release -o /app/publish # ACA LO PUBLICA
+
+FROM base AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "GabineteBienestar.dll"]

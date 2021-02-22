@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SendDataRequest } from 'src/app/modelos/SendDataRequest';
+import { SendDataRequest } from '../../modelos/sendDataRequest';
 import { SolicitudService } from 'src/app/services/solicitud.service';
 import { Parameters } from '../../modelos/Parameters';
 import { FormControl, Validators } from '@angular/forms';

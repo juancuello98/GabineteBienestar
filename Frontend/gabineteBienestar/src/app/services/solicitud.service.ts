@@ -1,13 +1,12 @@
 import { HttpClient, HttpHeaderResponse, HttpHeaders, HttpParams } from '@angular/common/http';
-import { serializeNodes } from '@angular/compiler/src/i18n/digest';
+//import { serializeNodes } from '@angular/compiler/src/i18n/digest';
 import { Injectable } from '@angular/core';
-import { Data } from '@angular/router';
+//import { Data } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, retry, catchError } from 'rxjs/operators';
 import { DataRequest } from '../modelos/dataRequest';
 import { LoginResponse } from '../modelos/LoginResponse';
-import { Parameters } from '../modelos/Parameters';
-import { SendDataRequest } from '../modelos/SendDataRequest';
+import { SendDataRequest } from '../modelos/sendDataRequest';
 
 @Injectable({
   providedIn: 'root',

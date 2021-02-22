@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: window["env"]["production"] || "default",
+  api_url: window["env"]["apiUrl"] || "default"
 };

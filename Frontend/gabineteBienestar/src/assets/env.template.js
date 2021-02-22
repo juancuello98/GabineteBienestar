@@ -1,9 +1,9 @@
 (function(window) {
-  window.env = new window.env || {};
+  window.env = window.env || {};
 
     // Environment variables
   window["env"]["production"] = "${PRODUCTION}";
-  window["env"]["apiUrl"] = "${API_URL}";
+  window["env"]["api_url"] = "${API_URL}";
 })(this);
 
 

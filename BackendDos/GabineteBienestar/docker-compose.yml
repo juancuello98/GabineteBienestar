@@ -2,9 +2,9 @@ version: '3.1'
 
 services: 
   frontend:
-    image: bienestar_front   
+    image: gabinete_frontend  
     environment: 
-      - api_url= http://localhost:8100/
+      - API_URL=http://localhost:8100/api/Solicitud/
     ports: 
       - "8200:80"
 

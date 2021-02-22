@@ -7,6 +7,7 @@ import { map, retry, catchError } from 'rxjs/operators';
 import { DataRequest } from '../modelos/dataRequest';
 import { LoginResponse } from '../modelos/LoginResponse';
 import { SendDataRequest } from '../modelos/sendDataRequest';
+import {environment} from './../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ import { SendDataRequest } from '../modelos/sendDataRequest';
 export class SolicitudService {
 
 
-  private urlApi = 'https://localhost:44307/api/Solicitud/';
+  private urlApi = environment.api_url;
 
 
   constructor(private http: HttpClient) {

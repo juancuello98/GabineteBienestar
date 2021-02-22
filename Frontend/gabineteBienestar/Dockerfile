@@ -2,8 +2,8 @@
 
 FROM node:12.18.3 as node
 
-ARG ENV= prod
-ARG APP= gabinete-bienestar
+ARG ENV=prod
+ARG APP=gabinete-bienestar
 
 ENV ENV ${ENV}
 ENV APP ${APP}
@@ -21,8 +21,8 @@ RUN npm run build --prod -- --base-href='/'
 
 FROM nginx:1
 
-COPY --from=node /app/dist/ /user/share/nginx/html/
+COPY --from=node /app/dist/gabineteBienestar /usr/share/nginx/html/
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 #When the container starts, replace the env.js with values from environment variables
-CMD ["/bin/sh", "-c", "envsubst < /usr/share/nginx/html/assets/env.template.js > /usr/share/nginx/html/assets/env.js && exec nginx -g 'deamon off;'"]
+CMD ["/bin/sh", "-c", "envsubst < /usr/share/nginx/html/assets/env.template.js > /usr/share/nginx/html/assets/env.js && exec nginx -g 'daemon off;'"]

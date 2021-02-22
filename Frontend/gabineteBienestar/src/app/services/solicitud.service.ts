@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 //import { Data } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, retry, catchError } from 'rxjs/operators';
+import { environment } from 'src/environments/environment.staging';
 import { DataRequest } from '../modelos/dataRequest';
 import { LoginResponse } from '../modelos/LoginResponse';
 import { SendDataRequest } from '../modelos/sendDataRequest';
@@ -14,7 +15,7 @@ import { SendDataRequest } from '../modelos/sendDataRequest';
 export class SolicitudService {
 
 
-  private urlApi = 'https://localhost:44307/api/Solicitud/';
+  private urlApi = environment.urlApi;
 
 
   constructor(private http: HttpClient) {
